@@ -65,7 +65,7 @@ function Player(name, turn, totalScore){
 //    }
 // }
 
-Player.protoype.addScore = function(number){
+  Player.protoype.addScore = function(number){
     this.totalScore = this.totalScore + number
 }
 
