@@ -56,6 +56,10 @@ function Player(name, turn, totalScore){
     this.totalScore = this.totalScore + number
 }
 
+function totalScore(number){
+    return 
+}
+
  function addRoll(roll, player) {
     // const roll = rollDice();
     if (roll === 1){
@@ -65,6 +69,10 @@ function Player(name, turn, totalScore){
     }
     // return totalScore
   };
+
+  Player.prototype.totalScore= function(score){
+    this.total = this.totalScore++
+  }
 
   function playerTurn(player1, player2){
      if (player1.turn === true){
@@ -92,7 +100,7 @@ function Player(name, turn, totalScore){
       $("#current-player-name").html("The current player is: " + activePlayer.name);
       $("#dice").click(function(){
           dice = rollDice();
-          total = dice+
+          total = totalScore();
           $("#roll").html("You rolled a: " + dice);
           if(dice === 1){
               switchPlayer(player1, player2);
